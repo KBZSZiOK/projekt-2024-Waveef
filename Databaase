@@ -1,0 +1,19 @@
+CREATE DATABASE `kino`; 
+
+CREATE TABLE `Filmy` ( `id` int PRIMARY KEY AUTO_INCREMENT, `tytul` varchar(80), `rezyser` varchar(80), `czas_trwania` TIME ); 
+
+CREATE TABLE `rodzaj_filmu` ( `id` int PRIMARY KEY AUTO_INCREMENT, `nazwa` varchar(255) NOT NULL);
+
+CREATE TABLE `klienci` ( `id` int PRIMARY KEY AUTO_INCREMENT, `imie` varchar(50) NOT NULL, `nazwisko` varchar(200) NOT NULL, `mail` varchar(250) NOT NULL);
+
+CREATE TABLE `sale` ( `id` int PRIMARY KEY AUTO_INCREMENT, `ilosc_miejsc` int NOT NULL);
+
+CREATE TABLE `sprzedawcy` ( `id` int PRIMARY KEY AUTO_INCREMENT, `imie` varchar(100) NOT NULL, `nazwisko` varchar(200) NOT NULL);
+
+CREATE TABLE `Filmy_rodzaj` ( `id` int PRIMARY KEY AUTO_INCREMENT, `filmy_id` int, `rodzaj_id` int , FOREIGN KEY (`filmy_id`) REFERENCES Filmy(id), FOREIGN KEY (`rodzaj_id`) REFERENCES rodzaj_filmu(id));
+
+CREATE TABLE `seanse` ( `id` int PRIMARY KEY AUTO_INCREMENT, `termin` TIME NOT NULL, `sala_id` int, `film_id` int, `liczba_wolnych_miejsc` int NOT NULL, FOREIGN KEY (`sala_id`) REFERENCES sale(id), FOREIGN KEY (`film_id`) REFERENCES Filmy(id));
+
+CREATE TABLE `bilety` ( `id` int PRIMARY KEY AUTO_INCREMENT, `seans_id` int, `sprzedawca_id` int, `klient_id` int, `cena` int NOT NULL, FOREIGN KEY (`seans_id`) REFERENCES seanse(id), FOREIGN KEY (`sprzedawca_id`) REFERENCES sprzedawcy(id), FOREIGN KEY (`klient_id`) REFERENCES klienci(id));
+
+
