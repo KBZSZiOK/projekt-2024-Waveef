@@ -16,4 +16,33 @@ CREATE TABLE `seanse` ( `id` int PRIMARY KEY AUTO_INCREMENT, `termin` TIME NOT N
 
 CREATE TABLE `bilety` ( `id` int PRIMARY KEY AUTO_INCREMENT, `seans_id` int, `sprzedawca_id` int, `klient_id` int, `cena` int NOT NULL, FOREIGN KEY (`seans_id`) REFERENCES seanse(id), FOREIGN KEY (`sprzedawca_id`) REFERENCES sprzedawcy(id), FOREIGN KEY (`klient_id`) REFERENCES klienci(id));
 
+INSERT INTO `klienci` VALUES (id, "Joanna", "Roszkiewicz", "joannaroszkiewicz@gmail.com"), (id, "Mikołaj", "Pączkowski", "mikolajpaczkowski11@gmail.com"), (id, "Aleksander", "Parus", "aleksanderparus1922@tlen.pl"); 
 
+INSERT INTO `sprzedawcy` VALUES (id, "Edmund", "Zdeb"), (id, "Włodzimierz", "Śliwowski"), (id, "Iwona", "Czachor"); 
+
+INSERT INTO `rodzaj_filmu` VALUES (id, "Komedia"), (id, "Dramat"), (id, "Horror"), (id, "Kryminał"), (id, "Science Fiction"), (id, "Fantasy"), (id, "Historyczny"), (id, "Wojenny"), (id, "Familijny"); 
+
+INSERT INTO `sale` VALUES (id, 80), (id, 54), (id, 53), (id, 74), (id, 69), (id, 63), (id, 60), (id, 75);
+
+INSERT INTO `Filmy` VALUES (id, "Moonfall", "Roland Emmerich", 130); 
+
+INSERT INTO `Filmy` VALUES (id, "Dywizjon 303", "Denis Delić", 99),
+(id, "Top Gun: Maverick", "Joseph Kosinski", 131),
+(id, "Minionki", "Pierre Coffin, Kyle Balda", 90),
+(id, "Oppenheimer", "Christopher Nolan", 180);
+
+INSERT INTO `Filmy_rodzaj` VALUES (id, 2, 5),
+(id, 3, 8),
+(id, 4, 3),
+(id, 5, 9),
+(id, 6, 4);
+
+INSERT INTO `seanse` VALUES (id, '2024-10-29 13:12:00', 1, 2, 10),
+(id, '2024-10-29 15:30:00', 2, 3, 14),
+(id, '2024-10-29 14:10:00', 3, 4, 32),
+(id, '2024-10-29 17:20:00', 4, 5, 23),
+(id, '2024-10-29 18:40:00', 5, 6, 6);
+
+INSERT INTO `bilety` VALUES (id, 1, 1, 1, 30),
+(id, 4, 3, 2, 35),
+(id, 2, 2, 3, 40);
