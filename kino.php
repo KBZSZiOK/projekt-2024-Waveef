@@ -9,6 +9,6 @@
         <a href="kino.php">Strona główna</a>
         <a href="tabela.php">Tabele</a>
         <a href="dodaj.php">Dodaj</a>
-    </div>
+    </div><br><br>
     <div id="stopka">Stopka</div>
 </body>
