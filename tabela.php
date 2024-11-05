@@ -1,12 +1,8 @@
-<?php
-    $sql = mysqli_connect("localhost", "root", "", "kino");
-    $tabele = "SELECT * FROM `Filmy`";
-    $wynik = mysqli_query($sql, $tabele);
-?>
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <title>Srona główna</title>
+    <link rel="stylesheet" href="css.css">
 </head>
 <body>
     <div id="banner"><h1>Baner</h1></div>
@@ -24,6 +20,9 @@
                 <th>Czas</th>
             </tr>
             <?php
+                $sql = mysqli_connect("localhost", "root", "", "kino");
+                $tabele = "SELECT * FROM `Filmy`";
+                $wynik = mysqli_query($sql, $tabele);
                 while($rzad = $wynik->fetch_assoc()) {
                     echo "<tr>";
                     echo "<td>" . $rzad['id'] . "</td>";

@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+#banner, #stopka {
+    background-color: #d19b4f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    left:0;
+    position: fixed;
+}
+#banner {
+    top:0;
+}
+#stopka {
+    bottom: 0;
+}
+#nav {
+    display: flex;
+    justify-content: center;
+    background-color: #e0cba4;
+    position: fixed;
+    width: 100%;
+    top: 108px;
+}
+#nav a {
+    color: white;
+    padding: 15px;
+
+}
+#nav a:hover {
+    color: #555;   
+}
+#content {
+    padding: 200px 20px 60px 20px;  
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, td, th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #ffe4c4;
+}
+td {
+    background-color: #faeee1;
+}
+@media (max-width: 768px) {
+    #nav {
+        flex-direction: column;
+    }
+}
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: antiquewhite;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #deb887;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+input[type="submit"]:hover {
+    background-color: #dbb079;
+}
