@@ -13,9 +13,9 @@
     </div>
     <div id="content">
         <form method="POST">
-            Tytuł: <input type="text"><br>
-            Reżyser: <input type="text"><br>
-            Czas trwania<input type="text"><br>
+            Tytuł: <input type="text" name="tytul"><br>
+            Reżyser: <input type="text" name="rezyser"><br>
+            Czas trwania<input type="text" name="czas_trwania"><br>
             <input type="submit" value="Insert">
         </form>
     </div>
