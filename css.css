@@ -36,9 +36,6 @@ body {
 #nav a:hover {
     color: #555;   
 }
-#content {
-    padding: 200px;  
-}
 table {
     width: 100%;
     border-collapse: collapse;

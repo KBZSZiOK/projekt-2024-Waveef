@@ -12,6 +12,7 @@
         <a href="dodaj.php">Dodaj film</a>
     </div>
     <div id="content">
+        <h1>Tabela Filmy:</h1>
         <table>
             <tr>
                 <th>ID</th>
@@ -29,6 +30,28 @@
                     echo "<td>" . $rzad['tytul'] . "</td>";
                     echo "<td>" . $rzad['rezyser'] . "</td>";
                     echo "<td>" . $rzad['czas_trwania'] . " minut" . "</td>";
+                    echo "</tr>";
+                }
+            ?>
+        </table>
+        <h1>Tabela Klienci:</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>E-mail</th>
+            </tr>
+            <?php
+                $sql = mysqli_connect("localhost", "root", "", "kino");
+                $tabele = "SELECT * FROM `klienci`";
+                $wynik = mysqli_query($sql, $tabele);
+                while($rzad = $wynik->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $rzad['id'] . "</td>";
+                    echo "<td>" . $rzad['imie'] . "</td>";
+                    echo "<td>" . $rzad['nazwisko'] . "</td>";
+                    echo "<td>" . $rzad['mail'] . "</td>";
                     echo "</tr>";
                 }
             ?>
