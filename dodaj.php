@@ -7,7 +7,7 @@
 <body>
     <div id="banner"><h1>Baner</h1></div>
     <div id="nav">
-        <a href="kino.php">Strona główna</a>
+        <a href="index.html">Strona główna</a>
         <a href="tabela.php">Tabele</a>
         <a href="dodaj.php">Dodaj film</a>
     </div>
@@ -39,5 +39,6 @@
         $mail = $_POST['mail'];
         $insert1 = "INSERT INTO `klienci` VALUES (id, '$imie', '$nazwisko', '$mail')";
         mysqli_query($sql, $insert1);
+        mysqli_close($sql);
     ?>
 </body>
