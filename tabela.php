@@ -7,7 +7,7 @@
 <body>
     <div id="banner"><h1>Baner</h1></div>
     <div id="nav">
-        <a href="index.html">Strona główna</a>
+        <a href="glowna.html">Strona główna</a>
         <a href="tabela.php">Tabele</a>
         <a href="dodaj.php">Dodaj film</a>
     </div>
@@ -34,29 +34,6 @@
                 }
             ?>
         </table>
-        <h1>Tabela Klienci:</h1>
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Imię</th>
-                <th>Nazwisko</th>
-                <th>E-mail</th>
-            </tr>
-            <?php
-                $sql = mysqli_connect("localhost", "root", "", "kino");
-                $tabele = "SELECT * FROM `klienci`";
-                $wynik = mysqli_query($sql, $tabele);
-                while($rzad = $wynik->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>" . $rzad['id'] . "</td>";
-                    echo "<td>" . $rzad['imie'] . "</td>";
-                    echo "<td>" . $rzad['nazwisko'] . "</td>";
-                    echo "<td>" . $rzad['mail'] . "</td>";
-                    echo "</tr>";
-                }
-            ?>
-        </table>
-        
     </div>
     <br><br>
     <div id="stopka">Stopka</div>
