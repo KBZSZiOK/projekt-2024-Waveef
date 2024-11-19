@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
-    <div id="banner"><h1>Baner</h1></div>
+    <div id="banner"><h1>Kino ZSZiO</h1></div>
     <div id="nav">
         <a href="glowna.html">Strona główna</a>
         <a href="tabela.php">Tabele</a>
@@ -20,7 +20,7 @@
         </form>
     </div>
     <br><br>
-    <div id="stopka">Stopka</div>
+    <div id="stopka">Piotr C</div>
     <?php
         $sql = mysqli_connect("localhost", "root", "", "kino");
         $tytul = $_POST['tytul'];
